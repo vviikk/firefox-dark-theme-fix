@@ -1,11 +1,174 @@
-input {
-  background-color: inherit;
-  color: black;
-  -moz-appearance: none !important;
+:root {
+	--browser-background: #38383d;
 }
 
-textarea {
-  background-color: inherit;
-  color: black;
-  -moz-appearance: none !important;
+/* Prevents New Tab White Flash */
+tabbrowser tabpanels {
+	background-color: var(--browser-background) !important;
+}
+
+/* Dark Theme for Context Menu Top Row */
+#context-navigation {
+	background-color: var(--uc-dark-bkgnd-color) !important;
+}
+
+/* Dark Theme for Sidebar */
+#sidebar-box {
+	background-color: hsl(240, 7%, 5%) !important;
+}
+
+toolbarbutton[checked="true"]:not([disabled="true"]) {
+	color: inherit !important;
+}
+
+#sidebar-header, .sidebar-splitter {
+	border-color: hsl(240, 3%, 20%) !important;
+}
+
+.sidebar-placesTree {
+	color: #aaa !important;
+}
+
+/* Dark Theme for Menus */
+:root {
+	--uc-dark-bkgnd-color: #2b2b2b;
+	--uc-light-bkgnd-color: #363636;
+	--uc-active-color: #404040;
+	--uc-text-color: rgb(195, 198, 201);
+	--uc-border-color: #767676;
+}
+
+#mainPopupSet menupopup menuitem,#mainPopupSet menupopup menu {
+	min-height: 24px !important;
+}
+
+.panel-arrowcontent,
+#placesContext,
+#alltabs-popup .arrowscrollbox-scrollbox,
+#contentAreaContextMenu,
+.textbox-contextmenu,
+#mainPopupSet menupopup,
+#bookmarks-menu-button menu menupopup {
+	border: 1px solid var(--uc-border-color) !important;
+	background: var(--uc-dark-bkgnd-color) !important;
+	color: var(--uc-text-color) !important;
+}
+
+#alltabs-popup menuitem,
+#bookmarks-menu-button menu menupopup .subviewbutton {
+	color: var(--uc-text-color) !important;
+}
+#mainPopupSet menupopup,
+#mainPopupSet menupopup menuitem,
+#mainPopupSet menupopup menu,
+#alltabs-popup,
+#bookmarks-menu-button menu menupopup {
+	-moz-appearance: none !important;
+	border: none;
+}
+
+.panel-subviews,
+#mainPopupSet menupopup,
+#bookmarks-menu-button menu menupopup > hbox,
+.search-panel-header.search-panel-current-engine,
+.search-panel-current-input, panelview,
+.PanelUI-subView {
+	background-color: var(--uc-dark-bkgnd-color) !important;
+}
+
+#BMB_bookmarksPopup {
+	background-color: unset !important;
+}
+
+.subviewbutton:hover,
+#PanelUI-contents toolbarbutton:hover,
+#mainPopupSet menupopup menuitem:hover,
+#mainPopupSet menupopup menu:hover,
+#PanelUI-footer toolbarbutton:not(#PanelUI-quit):hover {
+	background-color: var(--uc-active-color) !important;
+}
+
+#PanelUI-footer *,
+panelview toolbarbutton.subviewbutton .toolbarbutton-text,
+#downloadsFooter,#customizationui-widget-panel label,
+.autocomplete-richlistitem .ac-title,
+#widget-overflow-list toolbarbutton,
+#mainPopupSet menupopup menuitem,
+#mainPopupSet menupopup menu,
+#bookmarks-menu-button menu menupopup,
+#PopupSearchAutoComplete .autocomplete-tree.plain.search-panel-tree,
+#PanelUI-contents toolbarbutton,
+#sidebar-switcher-target,
+#alltabs_containersTab {
+	color: var(--uc-text-color)!important;
+}
+#alltabs-popup,
+#alltabs_containersMenuTab {
+	border: none !important;
+}
+#alltabs_containersMenuTab {
+	-moz-appearance: none !important;
+	background-color: transparent !important;
+}
+
+#placesContext,
+#contentAreaContextMenu,
+#contentAreaContextMenu menupopup,
+#page-action-mainView,
+.textbox-contextmenu {
+	-moz-appearance: none !important;
+	background-color: var(--uc-dark-bkgnd-color) !important;
+	border: none;
+}
+
+#placesContext menuitem,
+#contentAreaContextMenu menuitem,
+#contentAreaContextMenu menu,
+.textbox-contextmenu menuitem {
+	color: var(--uc-text-color) !important;
+	-moz-appearance: none;
+}
+
+#placesContext menuitem,
+#contentAreaContextMenu #context-navigation:not([hidden])~menu,
+#contentAreaContextMenu #context-navigation:not([hidden])~menuitem {
+	min-height: 24px !important;
+	height: 24px;
+}
+
+#placesContext menuitem[disabled="true"],
+#contentAreaContextMenu menuitem[disabled="true"],
+#mainPopupSet menupopup menuitem[disabled="true"],
+#BMB_bookmarksPopup menuitem[disabled],
+.textbox-contextmenu menuitem[disabled] {
+	color: #888 !important;
+}
+
+#placesContext menuitem:hover,
+#contentAreaContextMenu menuitem:hover,
+#contentAreaContextMenu menu:hover,
+#contentAreaContextMenu menu[open],
+.textbox-contextmenu menuitem:hover {
+	background-color: var(--uc-active-color);
+	border: none;
+}
+
+.autocomplete-richlistbox {
+	background-color: var(--uc-dark-bkgnd-color) !important;
+}
+#PopupAutoCompleteRichResult .ac-title,
+#PopupAutoCompleteRichResult .search-one-offs,
+.search-panel-input-value {
+	color: var(--uc-text-color) !important;
+}
+
+#PopupSearchAutoComplete {
+	background-color: var(--uc-light-bkgnd-color) !important;
+	color: var(--uc-text-color) !important;
+}
+
+.search-panel-one-offs,
+.downloadsPanelFooterButton:not(:hover),
+#overflowMenu-customize-button:not(:hover) {
+	background-color: var(--uc-light-bkgnd-color) !important;
 }
